@@ -39,8 +39,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +67,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatRadioModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],

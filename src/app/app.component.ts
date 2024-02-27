@@ -7,7 +7,7 @@ import { LoginService } from './services/login.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'aymaraacademia';
+  title = '';
   role: string = '';
   username: string = '';
 

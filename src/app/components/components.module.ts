@@ -35,6 +35,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScreeningComponent } from './screening/screening.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
+import { OfcaFormComponent } from './ofca-form/ofca-form.component';
+import { OfacTableComponent } from './ofac-table/ofac-table.component';
+import { OffshoreTableComponent } from './offshore-table/offshore-table.component';
 
 
 @NgModule({
@@ -45,8 +48,11 @@ import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-
     LandingComponent,
     ScreeningComponent,
     ProveedoresComponent,
+    OfcaFormComponent,
+    OfacTableComponent,
+    OffshoreTableComponent,
   ],
-  imports:[
+  imports: [
     CommonModule,
     ComponentsRoutingModule,
     MatDividerModule,
