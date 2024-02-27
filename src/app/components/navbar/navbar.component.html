@@ -3,8 +3,8 @@
     <span class="toolbar-items">
       <button mat-button routerLink="">
         <span>
-          <img src="" alt="Logo" class="col-2 m-2">
-          <span class="mat-subtitle-2">Aymara Academia</span>
+          <img src="../../../assets/logo.png" alt="" class="col-2 m-2">
+          <span class="mat-subtitle-2">EasyAccess</span>
         </span>
       </button>
 
@@ -18,7 +18,6 @@
 
     <span class="toolbar-items">
       <button mat-button routerLink="/login">Inicia Sesión</button>
-      <button mat-flat-button routerLink="/signup">Únete de forma gratuita</button>
     </span>
   </mat-toolbar>
 </nav>
@@ -29,24 +28,6 @@
       <img src="assets/logoipsum-226.svg" alt="Logo" class="col-2 m-2">
       <span class="mat-subtitle-2">Aymara Academia</span>
     </span>
-  </button>
-  <button mat-flat-button routerLink="components/curso/1" *ngIf="this.role=='ESTUDIANTE'">Ver unidades</button>
-  <span class="example-spacer"></span>
-  <button mat-button routerLink="components/entidades" *ngIf="this.role=='ADMIN'"><u>CRUD de las 19 entidades
-      (independientes y
-      dependientes)</u></button>
-  <span class="example-spacer"></span>
-  <a mat-icon-button href="https://trello.com/b/kKd2ScJB/aymaraacademia-backlog">
-    <i class="fa-brands fa-trello"></i>
-  </a>
-  <a mat-icon-button href="https://my.vertabelo.com/doc/lS3Nc212aTRj1vGQLN0O0s2fx4elD3gI">
-    <i class="fa-solid fa-database"></i>
-  </a>
-  <a mat-icon-button href="https://github.com/hous3master/aymaraacademiaapp">
-    <i class="fa-brands fa-square-github"></i>
-  </a>
-  <button mat-button [matMenuTriggerFor]="menuSalir" *ngIf="validarRol()" class="p-0 m-0">
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkit.com%2Fpng%2Fdetail%2F161-1617387_happy-smiling-guy.png" class="img-fluid overflow-hidden rounded-5" style="height: 48px; width: 48px;">
   </button>
 </mat-toolbar>
 
@@ -62,8 +43,5 @@
   <button mat-menu-item>
     Username:
     <span>{{ username }}</span>
-  </button>
-  <button mat-menu-item [routerLink]="['/components/perfil', username]">
-    Mi perfil
   </button>
 </mat-menu>
