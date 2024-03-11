@@ -33,8 +33,8 @@ export class SignupUserComponent implements OnInit {
   signup() {
     console.log(this.form.value);
     if (this.form.valid) {
-      this.user.Username = this.form.value.username;
-      this.user.Password = this.form.value.password;
+      this.user.Username = this.form.value.Username;
+      this.user.Password = this.form.value.Password;
 
       this.signupService
         .signupAndLogin(this.user, 'signup-cliente')

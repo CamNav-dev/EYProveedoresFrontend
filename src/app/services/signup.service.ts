@@ -15,8 +15,8 @@ const base_url = environment.base;
   providedIn: 'root',
 })
 export class SignupService {
-  private urlUsers = `${base_url}/users`;
-  private urlCliente = `${base_url}/cliente`;
+  private urlUsers = `${base_url}/Users/Crear`;
+
 
   constructor(private http: HttpClient, private loginService: LoginService, private router: Router) {}
 
@@ -32,7 +32,7 @@ export class SignupService {
   signupCliente(Cliente: Cliente): Observable<Cliente> {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + token);
-    return this.http.post<Cliente>(this.urlCliente, Cliente, { headers: headers });
+    return this.http.post<Cliente>(this.urlUsers, Cliente, { headers: headers });
   }
 
   signupAndLogin(user: Users, redirectUrl: string): Observable<any> {

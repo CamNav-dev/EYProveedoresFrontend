@@ -1,0 +1,46 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!-- Column Definitions -->
+      <ng-container matColumnDef="IdWbs">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.IdWbs}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="FirmName">
+        <th mat-header-cell *matHeaderCellDef> Firm Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.FirmName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.Address}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Country">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let element"> {{element.Country}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="FromDate">
+        <th mat-header-cell *matHeaderCellDef> FromDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.FromDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ToDate">
+        <th mat-header-cell *matHeaderCellDef> ToDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.ToDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Grounds">
+        <th mat-header-cell *matHeaderCellDef> Grounds </th>
+        <td mat-cell *matCellDef="let element"> {{element.Grounds}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

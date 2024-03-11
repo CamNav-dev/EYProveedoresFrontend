@@ -1,0 +1,17 @@
+.button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    grid-gap: 1rem;
+    font-size: 14px;
+    padding: 5px 200px;
+}
+
+.buscar-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-gap: 1rem;
+    padding: 5px 200px;
+    align-items: left;
+}

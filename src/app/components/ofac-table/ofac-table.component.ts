@@ -6,45 +6,34 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OFFACSource } from 'src/app/models/OFFACSource';
-import { HighRiskService } from 'src/app/services/HighRisk.service';
+import { OffacSourceService } from 'src/app/services/OFFACSource.service'; 
 import { ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-ofac-table',
   templateUrl: './ofac-table.component.html',
   styleUrls: ['./ofac-table.component.css']
 })
-export class OfacTableComponent {
-
-  dataSource: MatTableDataSource<OFFACSource> = new MatTableDataSource();
-  displayedColumns: string[] =
-    ['Name', 'Address', 'Type', 'Programs', 'List', 'Score'];
+export class OfacTableComponent implements OnInit{
+  dataSource: MatTableDataSource<OFFACSource>;
+  displayedColumns: string[] = [ 'Name', 'Address', 'Type', 'Programs', 'List', 'Score'];
+  searchQuery: string = ''; 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private highRiskService: HighRiskService, private route: ActivatedRoute) { }
-
-  name: string = "";
+  constructor(private offacSourceService: OffacSourceService, private route: ActivatedRoute) {
+    this.dataSource = new MatTableDataSource<OFFACSource>();
+  }
 
   ngOnInit(): void {
-
-    this.name = this.route.snapshot.paramMap.get('name')!;
-
-    this.highRiskService.ofcaList(this.name).subscribe((data: any) => {
-      console.log(data);
-      if (data) {
-        this.dataSource = new MatTableDataSource(data);
-        this.dataSource.paginator = this.paginator;
-      }
-    }
-
-
-
-    );
+    this.dataSource.paginator = this.paginator;
   }
 
-  filter(en: any) {
-    this.dataSource.filter = en.target.value.trim();
+  search() {
+    if (!this.searchQuery) return; 
+    this.offacSourceService.getOfacSources(this.searchQuery).subscribe(data => {
+      console.log(data); 
+      this.dataSource.data = data;
+      this.dataSource.paginator = this.paginator;
+    });
   }
-
 }

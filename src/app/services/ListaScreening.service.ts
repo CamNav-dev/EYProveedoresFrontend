@@ -8,13 +8,13 @@ const base_url = environment.base;
     providedIn: 'root',
   })
 export class ListaScreeningService {
-    private url = `${base_url}/ListaScreening`;
+  private url = `${base_url}/ListaScreening`;
   private listaCambio = new Subject<ListaScreening[]>();
   constructor(private http: HttpClient) {}
-  list() {
+  list(): Observable<ListaScreening[]>  {
     let token = sessionStorage.getItem('token');
 
-    return this.http.get<ListaScreening[]>(this.url, {
+    return this.http.get<ListaScreening[]>(this.url + '/lista', {
       headers: new HttpHeaders()
         .set('Authorization', `Bearer ${token}`)
         .set('Content-Type', 'application/json'),

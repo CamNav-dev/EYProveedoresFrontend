@@ -13,4 +13,5 @@ export class ListaScreening{
     OffshoreSource: OffShoreSource = new OffShoreSource();
     Cliente:Cliente = new Cliente();
     Proveedor:Proveedor = new Proveedor();
+    
 }

@@ -35,10 +35,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScreeningComponent } from './screening/screening.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
-import { OfcaFormComponent } from './ofca-form/ofca-form.component';
 import { OfacTableComponent } from './ofac-table/ofac-table.component';
 import { OffshoreTableComponent } from './offshore-table/offshore-table.component';
-
+import { ListarProveedoresComponent } from './proveedores/listar-proveedores/listar-proveedores.component';
+import { EditarProveedoresComponent } from './proveedores/editar-proveedores/editar-proveedores.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { TheworldbankTableComponent } from './theworldbank-table/theworldbank-table.component';
+import { ListaScreeningResponseComponent } from './lista-screening-response/lista-screening-response.component';
 
 @NgModule({
   declarations: [
@@ -48,9 +51,12 @@ import { OffshoreTableComponent } from './offshore-table/offshore-table.componen
     LandingComponent,
     ScreeningComponent,
     ProveedoresComponent,
-    OfcaFormComponent,
     OfacTableComponent,
     OffshoreTableComponent,
+    ListarProveedoresComponent,
+    EditarProveedoresComponent,
+    TheworldbankTableComponent,
+    ListaScreeningResponseComponent,
   ],
   imports: [
     CommonModule,
@@ -61,7 +67,11 @@ import { OffshoreTableComponent } from './offshore-table/offshore-table.componen
     ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatInputModule
+    MatInputModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatButtonModule,
+    FormsModule
   ]
 })
 export class ComponentsModule { }

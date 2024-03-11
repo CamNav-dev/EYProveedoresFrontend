@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="text-align: center">
+        <h2>Registro de Proveedor</h2>
+        <form [formGroup]="form" (submit)="aceptar()" class="example-form">
+
+          <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>idProveedor</mat-label>
+            <input matInput placeholder="IdProveedor" formControlName="IdProveedor" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>RazonSocial</mat-label>
+            <input matInput placeholder="RazonSocial" formControlName="RazonSocial" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="Nombre" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>IdTributaria</mat-label>
+            <input matInput placeholder="IdTributaria" formControlName="IdTributaria" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>Telefono</mat-label>
+            <input matInput placeholder="Telefono" formControlName="Telefono" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="Correo" formControlName="Correo" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width">
+            <mat-label>SitioWeb</mat-label>
+            <input matInput placeholder="SitioWeb" formControlName="SitioWeb" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Direccion</mat-label>
+            <input matInput placeholder="Direccion" formControlName="Direccion" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Pais</mat-label>
+            <input matInput placeholder="Pais" formControlName="Pais" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Facturacion</mat-label>
+            <input matInput placeholder="Facturacion" formControlName="Facturacion" />
+          </mat-form-field>
+          <br />
+
+          <mat-form-field class="example-full-width">
+            <mat-label>UltimaEdicion</mat-label>
+            <input matInput placeholder="UltimaEdicion" formControlName="UltimaEdicion" />
+          </mat-form-field>
+          <br />
+          <!-- Buttons for actions -->
+          <button mat-raised-button color="primary">Aceptar</button>
+          <button mat-raised-button color="warn" routerLink="../../../proveedores">Cancelar</button>
+          <p>{{ mensaje }}</p>
+        </form>
+      </div>
+</body>
+</html>

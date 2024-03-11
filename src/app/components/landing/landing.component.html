@@ -1,61 +1,115 @@
-<section class="index w-75 mx-auto">
-  <div class="row justify-content-center">
-    <div class="col-md-6 d-flex flex-column align-items-md-stretch justify-content-center">
+<!DOCTYPE html>
+<html lang="en">
 
-      <h1 class="mat-headline-3 p-0 m-0">EasyAccess</h1>
-      <h2>Conecta, Navega, Crece</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-      <div class="row p-0 m-0">
-        <button mat-raised-button class="col-7 p-0 m-0" color="primary" routerLink="/signup">Únete de forma
-          gratuita</button><br>
-        <span class="col-1 p-0 m-0"></span>
-        <button mat-raised-button class="col-4 p-0 m-0" routerLink="/login">Inicia Sesión</button><br>
+<body>
+  <header class="section__container header__container">
+    <h1 class="section__header"> EasyAccess</h1>
+    <p>
+      En la red de la innovación, cada interacción en nuestra aplicación fortalece lazos con proveedores, tejiendo el
+      camino hacia el éxito
+    </p>
+    <div class="btn-btn">
+      <button mat-flat-button color="primary" class="btn" mat-button routerLink="/signup-user">Regístrate</button>
+      <button mat-flat-button color="primary" class="btn" mat-button routerLink="/login">Inicia Sesión</button>
+    </div>
+  </header>
+
+  <section class=" section__container memories">
+    <div class="section__container memories__container">
+      <div class="memories__header">
+        <h2 class="section__header">Fuentes de búsqueda</h2>
       </div>
-
+      <div class="memories__grid">
+        <div class="memories__card">
+          <h4>World Bank Debarred Firms and Individuals</h4>
+          <p>
+            Esta base de datos es mantenida por el Banco Mundial y lista las entidades (empresas e individuos) que han
+            sido sancionadas e inhabilitadas para participar en proyectos financiados por el Banco Mundial.
+          </p>
+        </div>
+        <div class="memories__card">
+          <h4>ICIJ Offshore Leaks Database</h4>
+          <p>
+            El Consorcio Internacional de Periodistas de Investigación (ICIJ, por sus siglas en inglés) mantiene esta
+            base de datos, que permite buscar a través de millones de registros de entidades offshore y otras
+            estructuras financieras en paraísos fiscales.
+          </p>
+        </div>
+        <div class="memories__card">
+          <h4>OFAC Sanctions Search</h4>
+          <p>
+            La OFAC administra e impone sanciones económicas y comerciales siguiendo la política exterior y metas de
+            seguridad nacional de EE.UU., dirigidas a países, entidades e individuos extranjeros. Su base de datos
+            facilita la búsqueda de aquellos sujetos a sanciones por parte de EE.UU.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="col-6">
-      <svg viewBox="0 0 643 525">
-        <defs>
-          <clipPath id="shape">
-            <path fill="none" d="M109,120c0,0,163,46,220,9s34-97,34-97s39.138-16.341,70-11c26.406,4.57,66.618,73.939,105,138
-        c37.199,62.089,73,119,73,119s10.398,18.504,0,44c-8.608,21.105-22.685,41.421-88.85,85.03C468.32,442.51,411,474,411,474
-        s-85,45-192,9l-5,1c0,0-34.254,15.226-60.675,10.088c-36-7-48.249-32.676-48.249-32.676S172,402,160,327S60,220,60,220
-        s-8.444-34,0-52C77.666,130.345,109,120,109,120z" />
-          </clipPath>
-        </defs>
-        <image width="643" height="525" clip-path="url(#shape)"
-          xlink:href="https://www.rollingstone.com/wp-content/uploads/2021/03/AdobeStock_295570757.jpeg">
-        </image>
-      </svg>
+  <section class="section__container template__container">
+    <div class="template__content">
+      <h2 class="section__header">EasyAccess: Conecta, Busca, Crece</h2>
+      <p class="description">
+        Esta aplicación potenciaría el cumplimiento legal y la gestión de riesgos para las empresas, ofreciendo una
+        solución eficiente para la evaluación de socios comerciales mediante la consolidación de datos críticos sobre
+        sanciones, corrupción y actividades offshore en una única plataforma.
+      </p>
+      <button mat-flat-button color="primary" class="btn" routerLink="/signup-user">Regístrate</button>
     </div>
-
-  </div>
-</section>
-
-<mat-divider></mat-divider>
-
-<section class="w-75 mx-auto m-5">
-  <div class="d-flex flex-row">
-    <div class="w-25 p-3">
-      <img src="../assets/undraw_bibliophile_re_xarc.svg" class="img-fluid w-100" style="max-height: 128px;">
+    <div class="template__image">
+      <img src="../../../assets/supplier2.png" alt="template" />
     </div>
-    <div class="w-75 d-flex flex-column">
-      <h4 class=" text-center w-100 mat-headline-4 text-md-start">¿Por qué elegir EasyAccess?</h4>
-      <div>Al elegir Easy Access, las organizaciones pueden disfrutar de una gestión de proveedores más eficiente, transparente y segura, lo que finalmente contribuye a una cadena de suministro más robusta y resiliente.</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <h4>EasyAccess</h4>
-  <div class="container6">
-    <p class="text-center">Copyright 2024| Designed With by <a href="#">EasyAccess</a></p>
-    <ul class="social_footer_ul">
-      <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href="m"><i class="fa-brands fa-twitter"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-    </ul>
-  </div>
-</footer>
+  <section>
+    <footer class="section__container footer__container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>EasyAccess</h4>
+          <p>
+            <span><i class="ri-mail-fill"></i></span> camnav@pe.easyaccess.com
+          </p>
+          <p>
+            <span><i class="ri-phone-fill"></i></span> +51 998877654
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Sobre nosotros</h4>
+          <p>Inicio</p>
+          <p>Empresa</p>
+          <p>Recursos</p>
+        </div>
+        <div class="footer__col">
+          <h4>Aplicaciones</h4>
+          <p>Blog</p>
+          <p>Términos y políticas</p>
+          <p>Términos y condiciones</p>
+        </div>
+        <div class="footer__col">
+          <h4>Contáctanos</h4>
+          <p>Departmento</p>
+          <p>Redes sociales</p>
+          <p>Soporte técnico</p>
+        </div>
+      </div>
+    </footer>
+    <div class="section__container footer__bar">
+      <p>Copyright © 2024 EasyAccess. Todos los derechos reservados.</p>
+      <div class="socials">
+        <span><i class="ri-facebook-fill"></i></span>
+        <span><i class="ri-twitter-fill"></i></span>
+        <span><i class="ri-instagram-line"></i></span>
+        <span><i class="ri-youtube-fill"></i></span>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

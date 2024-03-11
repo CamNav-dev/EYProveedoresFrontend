@@ -36,10 +36,11 @@ export class ProveedorService{
   getList() {
     return this.listaCambio.asObservable();
   }
+  
   listId(id: number) {
     let token = sessionStorage.getItem('token');
 
-    return this.http.get<Proveedor>(`${this.url}/${id}`, {
+    return this.http.get<Proveedor>(`${this.url}/Buscar/${id}`, {
       headers: new HttpHeaders()
         .set('Authorization', `Bearer ${token}`)
         .set('Content-Type', 'application/json'),
@@ -48,7 +49,7 @@ export class ProveedorService{
   update(Proveedor: Proveedor) {
     let token = sessionStorage.getItem('token');
 
-    return this.http.put(this.url, Proveedor, {
+    return this.http.put(`${this.url}/Editar`, Proveedor, {
       headers: new HttpHeaders()
         .set('Authorization', `Bearer ${token}`)
         .set('Content-Type', 'application/json'),
@@ -57,7 +58,7 @@ export class ProveedorService{
   delete(id: number) {
     let token = sessionStorage.getItem('token');
 
-    return this.http.delete(`${this.url}/${id}`, {
+    return this.http.delete(`${this.url}/Eliminar/${id}`, {
       headers: new HttpHeaders()
         .set('Authorization', `Bearer ${token}`)
         .set('Content-Type', 'application/json'),

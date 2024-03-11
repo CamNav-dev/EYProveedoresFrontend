@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatGridListModule } from '@angular/material/grid-list';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent {
 
+export class LandingComponent {
 
   constructor(
     private matIconRegistry: MatIconRegistry,
@@ -18,4 +19,5 @@ export class LandingComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logoipsum-226.svg')
     );
   }
+
 }

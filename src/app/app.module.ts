@@ -33,6 +33,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
@@ -67,7 +68,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

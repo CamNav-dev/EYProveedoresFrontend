@@ -7,16 +7,12 @@
   </head>
   <body>
     <div class="container" style="text-align: center">
-      <div>
-        <img src="../assets/logoipsum-226.svg" alt="Logo de la empresa" />
-      </div>
-
       <h2>Regístrese</h2>
 
       <form [formGroup]="form" class="comment-form" id="editProfileForm">
         <mat-form-field class="example-full-width">
           <mat-label>Usuario</mat-label>
-          <input matInput placeholder="Usuario" formControlName="username" />
+          <input matInput placeholder="Usuario" formControlName="Username" />
         </mat-form-field>
         <br />
 
@@ -26,7 +22,7 @@
             type="password"
             matInput
             placeholder="Password"
-            formControlName="password"
+            formControlName="Password"
           />
         </mat-form-field>
         <br />
